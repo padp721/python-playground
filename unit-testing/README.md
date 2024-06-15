@@ -7,7 +7,7 @@ Proyek sederhana melakukan unit testing di bahasa pemrograman Python.
 
 ## Installing
  1. Clone repo utama
- 2. Masuk ke bagian unit_testing playground `cd ./python-playground/unit_testing`
+ 2. Masuk ke bagian unit_testing playground `cd ./python-playground/unit-testing`
  3. `poetry install`
  4. Baca help: `poetry run perhitungan_dasar --help`
 
