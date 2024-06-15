@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "unit-testing"
+version = "0.1.0"
+description = ""
+authors = ["padp721 <anggadp91@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+perhitungan_dasar = "unit_testing.perhitungan_dasar.__main__:main"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pylint = "^3.2.3"
+flake8 = "^7.0.0"
+flake8-pyproject = "^1.2.3"
+pytest-cov = "^5.0.0"
+
+
+[tool.pylint."MESSAGE CONTROL"]
+disable = '''
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+'''
+
+
+[tool.flake8]
+max-line-length = 100
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cache-clear --verbose -rA --junit-xml ./junit.xml --cov --cov-fail-under 75"
+testpaths = [
+    "tests"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
